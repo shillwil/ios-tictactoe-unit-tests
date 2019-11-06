@@ -17,7 +17,7 @@ class GameBoardTests: XCTestCase {
         for x in 0..<3 {
             for y in 0..<3 {
                 let square = (x, y)
-                XCTAssertNil(board[square])
+                XCTAssertNil(board[square], "The entry at (\(x), \(y)) was \(board[(x, y)]!) instead of nil")
             }
         }
     }
@@ -32,7 +32,7 @@ class GameBoardTests: XCTestCase {
             for y in 0..<3 {
                 if x == 0 && y == 0 { continue }
                 if x == 2 && y == 2 { continue }
-                XCTAssertNil(board[(x, y)])
+                XCTAssertNil(board[(x, y)], "The entry at (\(x), \(y)) was \(board[(x, y)]!) instead of nil")
             }
         }
         
